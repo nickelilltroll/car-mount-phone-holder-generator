@@ -1,6 +1,10 @@
 <h1 align="center">Car Mount Phone Holder Generator</h1>
 
 <p align="center">
+  <img src="assets/cover.png" alt="Car Mount Phone Holder Generator" width="100%">
+</p>
+
+<p align="center">
   A browser-based generator for customizable, 3D-printable phone holders for car mounts, including Brodit/AMPS mounting options.
 </p>
 
