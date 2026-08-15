@@ -1,0 +1,199 @@
+Car Mount Phone Holder Generator
+Proprietary Source-Available License v1.0
+
+Copyright (c) 2026 Niklas Forsgren
+All rights reserved.
+
+Effective date: 2026-08-15
+
+IMPORTANT: THIS IS NOT AN OPEN-SOURCE LICENSE.
+
+This license applies to the original source code, user interface, project-specific
+documentation, design logic, presets, configuration data, and other original
+materials in the Car Mount Phone Holder Generator project (collectively, the
+"Software"), except for third-party components that are expressly identified as
+being licensed under separate terms.
+
+1. LIMITED PERSONAL LICENSE
+
+Subject to these terms, the copyright holder grants you a limited, revocable,
+non-exclusive, non-transferable, non-sublicensable license to:
+
+a. download and run the Software for your own personal, non-commercial use;
+b. make reasonable backup copies solely for that permitted personal use; and
+c. generate 3D model output and print physical holders for your own personal,
+   non-commercial use.
+
+No other rights are granted except as required by applicable law or by the terms
+of the platform through which the Software is made available.
+
+2. GENERATED OUTPUT
+
+For purposes of this license, "Generated Output" includes STL, OpenSCAD/SCAD,
+mesh, geometry, and similar files created by the Software.
+
+You may use and modify Generated Output for your own personal, non-commercial
+purposes.
+
+Without prior written permission from the copyright holder, you may not:
+
+a. sell, license, sublicense, rent, or commercially distribute Generated Output;
+b. sell physical products manufactured from Generated Output;
+c. use Generated Output as part of a commercial service, business, marketplace,
+   subscription, paid customization service, or other revenue-generating activity;
+d. publish or redistribute Generated Output as a downloadable model library; or
+e. use Generated Output to create or support a competing commercial generator,
+   product catalog, or service.
+
+A separate commercial license may be available.
+
+3. RESTRICTIONS ON THE SOFTWARE
+
+Except with prior written permission from the copyright holder, you may not:
+
+a. modify, adapt, translate, port, transform, or create derivative works of the
+   Software;
+b. publish, republish, redistribute, mirror, sublicense, sell, rent, lease, or
+   otherwise provide copies of the Software to third parties;
+c. host the Software as a public or private web service for third-party use;
+d. incorporate the Software, or substantial parts of it, into another website,
+   application, product, service, plugin, extension, library, or commercial system;
+e. remove or alter copyright notices, license notices, attribution notices, or
+   proprietary notices;
+f. use the Software or its source code to build, train, reproduce, or materially
+   assist a competing phone-holder generator or similar commercial product;
+g. represent a modified or redistributed version as an official version of the
+   project; or
+h. authorize another person or entity to do any of the above.
+
+Nothing in this section restricts rights that cannot lawfully be restricted under
+applicable mandatory law.
+
+4. COMMERCIAL USE
+
+"Commercial Use" includes use primarily intended for or directed toward commercial
+advantage, monetary compensation, business activity, paid services, product sales,
+resale, subscription access, advertising-supported access, or other direct or
+indirect financial benefit.
+
+Commercial Use of the Software, Generated Output, or physical products made from
+Generated Output requires a separate written commercial license from the copyright
+holder unless the copyright holder has expressly granted permission in writing.
+
+Donations or voluntary support to the project, including Buy Me a Coffee payments,
+do not by themselves grant commercial rights.
+
+5. DEVELOPMENT, MODIFICATION, AND CONTRIBUTIONS
+
+If you wish to modify, extend, translate, port, integrate, or otherwise further
+develop the Software, you must obtain prior written permission from the copyright
+holder.
+
+Pull requests, patches, code contributions, translations, and other modifications
+should not be submitted unless the copyright holder has authorized the contribution
+or separate contribution terms have been agreed.
+
+6. PUBLIC GITHUB REPOSITORIES
+
+If the Software is made available in a public GitHub repository, GitHub's Terms of
+Service may grant GitHub and GitHub users limited rights necessary to view, display,
+use, perform, and reproduce the repository through GitHub's functionality,
+including forking within the GitHub service.
+
+Those platform-specific rights do not constitute an additional license from the
+copyright holder to modify, redistribute, commercialize, republish, host, or use
+the Software outside the rights expressly granted in this License.
+
+Where GitHub's mandatory platform terms conflict with this License solely as to use
+of GitHub's service, GitHub's applicable platform terms control to that limited
+extent.
+
+7. THIRD-PARTY SOFTWARE
+
+The Software may use or reference third-party components, including Three.js and
+JSCAD. Those components are licensed separately under their own licenses.
+
+This License does not replace, restrict, or revoke rights granted under valid
+third-party licenses. See THIRD_PARTY_NOTICES.md for details.
+
+8. OWNERSHIP
+
+The Software is licensed, not sold.
+
+Except for third-party components and other materials expressly identified as
+belonging to others, all right, title, and interest in and to the Software remain
+with the copyright holder.
+
+No trademark, trade name, patent, design right, or other intellectual-property
+license is granted except as expressly stated in writing.
+
+9. TRADEMARKS AND THIRD-PARTY PRODUCT NAMES
+
+Brodit and other company, product, and brand names may be trademarks of their
+respective owners.
+
+This project is an independent project and is not affiliated with, sponsored by,
+approved by, or endorsed by Brodit AB, Apple Inc., Samsung Electronics, Google LLC,
+or any other device or accessory manufacturer unless expressly stated otherwise.
+
+10. NO WARRANTY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE AND GENERATED OUTPUT
+ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, WHETHER
+EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE, ACCURACY, COMPATIBILITY, SAFETY, NON-INFRINGEMENT, OR
+UNINTERRUPTED OPERATION.
+
+PHONE, CASE, CABLE, VEHICLE, AND MOUNTING DIMENSIONS MAY VARY. YOU ARE RESPONSIBLE
+FOR VERIFYING FIT, MATERIAL CHOICE, PRINT QUALITY, MOUNTING SECURITY, AND SAFE USE.
+
+11. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER SHALL NOT BE
+LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE, BUSINESS, OR PROPERTY ARISING FROM
+OR RELATED TO THE SOFTWARE, GENERATED OUTPUT, PRINTED PARTS, OR THEIR USE.
+
+NOTHING IN THIS LICENSE EXCLUDES OR LIMITS LIABILITY THAT CANNOT LAWFULLY BE
+EXCLUDED OR LIMITED.
+
+12. TERMINATION
+
+Your rights under this License terminate automatically if you materially breach
+these terms.
+
+Upon termination, you must stop using and distributing any copies of the Software
+to the extent required by applicable law, except that valid third-party license
+rights remain unaffected.
+
+The copyright holder may separately reinstate permission in writing.
+
+13. COMMERCIAL OR SPECIAL PERMISSION
+
+Commercial use, redistribution, hosting, integration, modification, resale, and
+other rights not granted here may be available under a separate written agreement.
+
+See COMMERCIAL_LICENSE.md for information about requesting permission.
+
+14. GOVERNING LAW
+
+To the extent permitted by applicable mandatory law, this License is governed by
+the laws of Sweden, without regard to conflict-of-law principles.
+
+Mandatory consumer-protection or other statutory rights that cannot lawfully be
+waived remain unaffected.
+
+15. ENTIRE LICENSE AND SEVERABILITY
+
+This License, together with any documents expressly incorporated by reference,
+states the permissions granted by the copyright holder for the Software.
+
+If any provision is held unenforceable, the remaining provisions remain in effect
+to the maximum extent permitted by law.
+
+A separate signed written agreement with the copyright holder may grant additional
+rights and will control to the extent it expressly conflicts with this License.
+
+For commercial licensing or development permission, contact the project owner
+through the project's official GitHub profile/repository or Buy Me a Coffee page:
+https://www.buymeacoffee.com/lilltroll
