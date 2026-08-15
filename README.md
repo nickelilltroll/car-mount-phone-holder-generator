@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Current version: 5.3</strong>
+  <strong>Current version: 5.4</strong>
 </p>
 
 ---
