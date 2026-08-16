@@ -28,7 +28,6 @@ The generator runs directly in a modern web browser and can create models for 3D
 
 No installation is required — the generator runs directly in your browser.
 
-See [`GITHUB_PAGES.md`](GITHUB_PAGES.md) for information about the GitHub Pages setup.
 
 ## Features
 
