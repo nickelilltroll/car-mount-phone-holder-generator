@@ -174,26 +174,6 @@ A starting clearance of approximately **0.2–0.3 mm** can be useful, but the co
 
 Use the built-in fit test feature before printing the full holder whenever possible.
 
----
-
-## Project Structure
-
-```text
-car-mount-phone-holder-generator/
-├── index.html
-├── README.md
-├── CHANGELOG.md
-├── GITHUB_PAGES.md
-├── LICENSE
-├── TERMS.md
-├── COMMERCIAL_LICENSE.md
-├── THIRD_PARTY_NOTICES.md
-├── .nojekyll
-├── .gitignore
-└── assets/
-    └── screenshots/
-        └── README.md
-```
 
 ---
 
