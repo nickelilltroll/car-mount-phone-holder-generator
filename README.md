@@ -20,7 +20,6 @@ Car Mount Phone Holder Generator makes it easy to create a phone holder adapted 
 
 The generator runs directly in a modern web browser and can create models for 3D printing.
 
-The main application is contained in [`index.html`](index.html), which also makes the project suitable for hosting with GitHub Pages.
 
 ## Live Generator
 
