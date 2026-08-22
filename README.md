@@ -223,8 +223,7 @@ car-mount-phone-holder-generator/
 ├── .nojekyll
 ├── .gitignore
 └── assets/
-    └── screenshots/
-        └── README.md
+    └── cover.png
 ```
 
 ---
