@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="description" content="Browser-based generator for customizable 3D-printable phone holders for car mounts, including Brodit/AMPS mounting options." />
 <meta name="theme-color" content="#181b21" />
-<title>Car Mount Phone Holder Generator – v5.9.0</title>
+<title>Car Mount Phone Holder Generator – v5.9.2</title>
 <style>
   :root{color-scheme:light dark;--bg:#f5f6f8;--card:#fff;--text:#16181c;--muted:#667085;--line:#d7dce3;--accent:#1f67d2;--soft:#eaf2ff;--code:#111827;--ok:#127a46;--warn:#9a5b00}
   @media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--text:#f2f4f7;--muted:#a4acb9;--line:#343a46;--accent:#7eb0ff;--soft:#16243a;--code:#0b0d11;--ok:#69d49b;--warn:#ffc46b}}
@@ -365,7 +365,7 @@ function refreshPhoneSourceLine(){
     :`${tr('Källa','Source')}: ${src}`;
 }
 function applyLanguage(lang){
-  currentLang=lang==='en'?'en':'sv'; document.documentElement.lang=currentLang; document.title='Car Mount Phone Holder Generator – v5.9.0'; localStorage.setItem('carMountLanguage',currentLang);
+  currentLang=lang==='en'?'en':'sv'; document.documentElement.lang=currentLang; document.title='Car Mount Phone Holder Generator – v5.9.2'; localStorage.setItem('carMountLanguage',currentLang);
   if($('language'))$('language').value=currentLang;
   if($('viewer3d'))$('viewer3d').setAttribute('aria-label',tr('Interaktiv 3D-förhandsvisning','Interactive 3D preview'));
   document.querySelector('.viewTools')?.setAttribute('aria-label',tr('Kameravyer','Camera views'));
@@ -558,15 +558,17 @@ function calc(){
   const minimalBranchH=14;
   const minimalBranchY=Math.max(bottomH+28,Math.min(printH-58,printH*.55));
   // The two side grips occupy exactly the same Y-band as the bridge.
-  // This makes them visually and structurally aligned with the rest of the Minimalist holder.
+  // Give each grip a deep root into the rear bridge instead of the old 0.14 mm skin overlap.
+  // This changes only the hidden structural root; the phone cavity and front lip stay unchanged.
   const minimalRailY=minimalBranchY;
   const minimalRailH=minimalBranchH;
   const minimalGripLip=Math.max(0.8,Math.min(n('lipW'),2.5));
+  const minimalGripRootOverlap=Math.max(1.2,Math.min(2.0,back*.75));
   // frontOpen controls the ACTUAL width of the insertion slot at the front of the dock.
   // Keep at least 0.8 mm of material on each outer side of the front opening.
   const dockFront=conn.enabled?phoneCenterZ+dockInnerT/2+dockFrontWall+(conn.coverMode?conn.coverT:0):0;
   const outerD=plateMaxT+Math.max(holderFront,dockFront);
-  return {devW,devH,devT,cavW,cavH,cavT,outerW,outerH:fullOuterH,printH,holderDesign,halfMargin,mountCY,ballSpacing,outerD,holderD:holderFront,wall,back,bottomH,bottomInset,cornerR,railR,plate,plateMaxT,minimalSpineBottomW,minimalSpineTopW,minimalBranchH,minimalBranchY,minimalRailY,minimalRailH,minimalGripLip,conn:{...conn,innerW:dockInnerW,innerT:dockInnerT,outerW:dockOuterW,outerT:dockOuterT,backWall:dockBackWall,frontWall:dockFrontWall,outerY0:dockOuterY0,outerH:dockOuterH,coverEar,coverW,coverH,coverTongueW,coverMountOffsetY,coverScrewX,coverScrewY,coverScrewYPart,coverNotchW,coverBossW,coverBossH,coverBossD,sleevePocketOffsetZ,sleeveCenterZ,sleeveH,sleeveSideOverlap,sleeveBottomGap,lockScrewY,centerX:outerW/2+conn.x,centerZ:phoneCenterZ}};
+  return {devW,devH,devT,cavW,cavH,cavT,outerW,outerH:fullOuterH,printH,holderDesign,halfMargin,mountCY,ballSpacing,outerD,holderD:holderFront,wall,back,bottomH,bottomInset,cornerR,railR,plate,plateMaxT,minimalSpineBottomW,minimalSpineTopW,minimalBranchH,minimalBranchY,minimalRailY,minimalRailH,minimalGripLip,minimalGripRootOverlap,conn:{...conn,innerW:dockInnerW,innerT:dockInnerT,outerW:dockOuterW,outerT:dockOuterT,backWall:dockBackWall,frontWall:dockFrontWall,outerY0:dockOuterY0,outerH:dockOuterH,coverEar,coverW,coverH,coverTongueW,coverMountOffsetY,coverScrewX,coverScrewY,coverScrewYPart,coverNotchW,coverBossW,coverBossH,coverBossD,sleevePocketOffsetZ,sleeveCenterZ,sleeveH,sleeveSideOverlap,sleeveBottomGap,lockScrewY,centerX:outerW/2+conn.x,centerZ:phoneCenterZ}};
 }
 function testPieceSpec(){
   const d=calc(), requested=Math.max(10,n('testHeight')||28), h=Math.min(requested,d.printH);
@@ -613,7 +615,7 @@ holder_design="${d.holderDesign}"; body_h=${d.printH.toFixed(2)};
 ball_joint_spacing=${d.ballSpacing.toFixed(2)};
 minimal_spine_bottom_w=${d.minimalSpineBottomW.toFixed(2)}; minimal_spine_top_w=${d.minimalSpineTopW.toFixed(2)};
 minimal_branch_y=${d.minimalBranchY.toFixed(2)}; minimal_branch_h=${d.minimalBranchH.toFixed(2)}; minimal_rail_y=${d.minimalRailY.toFixed(2)}; minimal_rail_h=${d.minimalRailH.toFixed(2)};
-minimal_grip_lip=${d.minimalGripLip.toFixed(2)};
+minimal_grip_lip=${d.minimalGripLip.toFixed(2)}; minimal_grip_root_overlap=${d.minimalGripRootOverlap.toFixed(2)};
 charge_sleeve=${conn.mode==='sleeve'?'true':'false'}; charge_cover=${conn.mode==='cover'?'true':'false'}; conn_w=${conn.w.toFixed(2)}; conn_t=${conn.t.toFixed(2)}; conn_h=${conn.h.toFixed(2)};
 conn_fit=${conn.fit.toFixed(2)}; dock_wall=${conn.wall.toFixed(2)}; cable_d=${conn.cableD.toFixed(2)}; conn_gap=${conn.gap.toFixed(2)};
 cover_t=${conn.coverT.toFixed(2)}; cover_tongue_len=${conn.coverTongueLen.toFixed(2)}; cover_tongue_w=${conn.coverTongueW.toFixed(2)}; cover_mount_offset_y=${conn.coverMountOffsetY.toFixed(2)}; cover_screw_d=${conn.coverScrewD.toFixed(2)}; cover_pilot_d=${conn.coverPilotD.toFixed(2)}; cover_w=${conn.coverW.toFixed(2)}; cover_h=${conn.coverH.toFixed(2)};
@@ -654,14 +656,25 @@ module rail(y0,rh){
 }
 module minimal_grip(y0,rh){
   if(rh>0.8){
-    // Correct short side channels around the phone cavity.
-    // Inner wall faces are exactly at cavity boundaries x=wall and x=outer_w-wall.
-    translate([0,y0,back_t-0.14])
-      soft_box([wall,rh,cavity_t+lip_t+0.14],rail_r);
-    translate([outer_w-wall,y0,back_t-0.14])
-      soft_box([wall,rh,cavity_t+lip_t+0.14],rail_r);
+    // Deep structural roots: the side walls extend into the rear bridge instead of
+    // touching it with only a very thin skin. The phone-cavity faces stay unchanged.
+    root_z=max(0,back_t-minimal_grip_root_overlap);
+    side_depth=back_t+cavity_t+lip_t-root_z;
+    root_depth=max(0.8,back_t-root_z+0.8);
 
-    // Short front lips: connected to the side walls and extending inward over the phone front.
+    translate([0,y0,root_z])
+      soft_box([wall,rh,side_depth],rail_r);
+    translate([outer_w-wall,y0,root_z])
+      soft_box([wall,rh,side_depth],rail_r);
+
+    // Solid hidden roots guarantee a broad union with the cross-bridge even when
+    // the visible side walls use rounded corners.
+    translate([0,y0,root_z])
+      cube([wall,rh,root_depth]);
+    translate([outer_w-wall,y0,root_z])
+      cube([wall,rh,root_depth]);
+
+    // Short front lips remain in the exact same position and keep the same phone clearance.
     translate([0,y0,back_t+cavity_t])
       soft_box([wall+minimal_grip_lip,rh,lip_t],min(rail_r,.75));
     translate([outer_w-wall-minimal_grip_lip,y0,back_t+cavity_t])
@@ -695,7 +708,7 @@ module charge_sleeve_outer(){
     soft_box([dock_outer_w,min(sleeve_h,bottom_h),anchor_d],min(1.0,rail_r+.3));
 }
 module charge_sleeve_cuts(){
-  // Connector housing pocket is open through the underside and shifted 2 mm forward.
+  // Connector housing pocket is open through the underside and shifted 1 mm forward.
   translate([dock_center_x-dock_inner_w/2,-.7,sleeve_center_z-dock_inner_t/2])
     soft_box([dock_inner_w,sleeve_h+1.6,dock_inner_t],min(1.2,conn_fit+.55));
 
@@ -915,7 +928,7 @@ function update(){
 }
 const CONFIG_FILE_FORMAT='car-mount-phone-holder-generator-config';
 const CONFIG_FILE_VERSION=1;
-const GENERATOR_VERSION='5.9.0';
+const GENERATOR_VERSION='5.9.2';
 
 function configurationControls(){
   return [...document.querySelectorAll('input[id],select[id],textarea[id]')]
@@ -1106,11 +1119,19 @@ function buildJscadGeometry(j,opts={}){
    if(rh<=.8)return;
    const l=d.minimalGripLip,lt=n('lipT');
    const lipW=d.wall+l;
+   const rootZ=Math.max(0,d.back-d.minimalGripRootOverlap);
+   const sideDepth=d.back+d.cavT+lt-rootZ;
+   const rootDepth=Math.max(.8,d.back-rootZ+.8);
 
-   // Side walls use the real cavity edges, identical to the proven standard-holder geometry.
+   // Side walls now have a deep root inside the Minimalist cross-bridge.
+   // Their inner X faces and their front Z position remain unchanged.
    parts.push(
-     jSoftBox(j,[d.wall,rh,d.cavT+lt+.14],[0,y0,d.back-.14],d.railR),
-     jSoftBox(j,[d.wall,rh,d.cavT+lt+.14],[d.outerW-d.wall,y0,d.back-.14],d.railR),
+     jSoftBox(j,[d.wall,rh,sideDepth],[0,y0,rootZ],d.railR),
+     jSoftBox(j,[d.wall,rh,sideDepth],[d.outerW-d.wall,y0,rootZ],d.railR),
+
+     // Hidden solid roots create a broad, non-rounded structural intersection.
+     jBox(j,[d.wall,rh,rootDepth],[0,y0,rootZ]),
+     jBox(j,[d.wall,rh,rootDepth],[d.outerW-d.wall,y0,rootZ]),
 
      // Front lips overlap each side wall completely and extend only inward.
      jSoftBox(j,[lipW,rh,lt],[0,y0,d.back+d.cavT],Math.min(d.railR,.75)),

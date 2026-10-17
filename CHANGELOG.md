@@ -2,6 +2,15 @@
 
 All notable changes to the Car Mount Phone Holder Generator are documented here.
 
+## [5.9.2] - 2026-10-17
+
+### Fixed
+- Reinforced both **Minimalist side grips** at the transition into the cross-bridge/back structure.
+- Replaced the previous approximately 0.14 mm rear overlap with a structural root of up to **2.0 mm** into the rear bridge.
+- Added hidden solid root blocks on both sides so rounded grip geometry cannot leave a point-like or fragile connection.
+- The phone cavity width, configured clearance and front-lip position are unchanged.
+- Applied the same construction to the interactive 3D preview, STL geometry and OpenSCAD export.
+
 ## [5.9.0] - 2026-08-21
 
 ### Added

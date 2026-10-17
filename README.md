@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Current version: 5.9.0</strong>
+  <strong>Current version: 5.9.2</strong>
 </p>
 
 ---
@@ -55,7 +55,7 @@ Choose between:
 
 - **Full Plate** — full-height rear plate
 - **Half Plate** — shortened design ending just above the upper mounting holes
-- **Minimalist** — tapered central spine with two mirrored side clamps aligned directly with the cross-bridge, plus a centred lower support
+- **Minimalist** — tapered central spine with two mirrored side clamps aligned directly with the cross-bridge, reinforced by deep structural roots into the rear bridge, plus a centred lower support
 
 ### Adjustable fit and geometry
 
